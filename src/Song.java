@@ -1,4 +1,9 @@
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+
+
 public class Song {
 
     public void printSong() {
@@ -36,7 +41,8 @@ public class Song {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        PrintStream output = new PrintStream("sangtekst.txt");
         Song song = new Song();
         song.printSong();
     }
